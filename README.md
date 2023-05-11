@@ -3,7 +3,7 @@ Campos eletromagnéticos provocados por cargas em movimento.
 
 # Referências
 + Gould: Computer Simulation Methods
-+ Grifiths: Electrodynamics
++ Griffiths: Electrodynamics
 + Nakanishi: Computational Physics
 
 # Imagens
