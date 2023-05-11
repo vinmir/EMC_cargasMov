@@ -1,0 +1,246 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8752,        238]
+NotebookOptionsPosition[      7275,        202]
+NotebookOutlinePosition[      7668,        218]
+CellTagsIndexPosition[      7625,        215]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["EMC, Projeto 4", "Chapter",
+ CellChangeTimes->{{3.848008616741894*^9, 
+  3.8480086549825783`*^9}},ExpressionUUID->"e7d414c1-ea03-40f2-937c-\
+ba52abe39961"],
+
+Cell[CellGroupData[{
+
+Cell["Geral: m\[EAcute]todo num\[EAcute]rico para extrair raiz", "Section",
+ CellChangeTimes->{{3.8480086592439413`*^9, 
+  3.8480086776698627`*^9}},ExpressionUUID->"2872ef2b-4e74-401f-9f61-\
+d7e22b4e4162"],
+
+Cell["Refer\[EHat]ncias:", "Text",
+ CellChangeTimes->{{3.8480086870796137`*^9, 
+  3.848008700819467*^9}},ExpressionUUID->"7431295d-6365-46ec-b332-\
+6742e8bd3eae"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Module creates a symbol with name xxx\\$nnn to \
+represent a local variable",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://mathematica.stackexchange.com/questions/120254/using-solve-\
+inside-a-module"], None},
+ ButtonNote->
+  "https://mathematica.stackexchange.com/questions/120254/using-solve-inside-\
+a-module"]], "Item",
+ CellChangeTimes->{{3.84800871174481*^9, 3.848008712885952*^9}, {
+  3.848008792547881*^9, 
+  3.8480088382896833`*^9}},ExpressionUUID->"a19c8b7a-e698-4958-818b-\
+bec0af42f6e8"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Em outras palavras, esta refer\[EHat]ncia explica como devidamente utilizar m\
+\[EAcute]todos Solve/NSolve dentro de um m\[OAcute]dulo.\
+\>", "Subitem",
+ CellChangeTimes->{{3.84800871174481*^9, 3.848008712885952*^9}, {
+  3.848008792547881*^9, 
+  3.848008874480095*^9}},ExpressionUUID->"b637d8ff-31ed-4d64-9d1c-\
+a79327d5ef9f"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"calcRoot", "[", 
+    RowBox[{"r_", ",", "t_", ",", "w_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"tr", ",", "sol"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"sol", "=", 
+       RowBox[{"NSolve", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Norm", "[", 
+           RowBox[{"r", "-", 
+            RowBox[{"w", "[", "tr", "]"}]}], "]"}], "==", 
+          RowBox[{"(", 
+           RowBox[{"t", "-", "tr"}], ")"}]}], ",", "tr", ",", "Reals"}], 
+        "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"tr", "/.", "sol"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", 
+     RowBox[{"-", "8"}], ",", "17"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t", "=", "30"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Omega]", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{
+    RowBox[{"10", "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "6"}], ")"}]}], "/", "\[Omega]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"w", "[", "t_", "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"A", "*", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Omega]", "*", "t"}], "]"}]}], ",", "0", ",", "0"}], "}"}]}],
+   ";"}]}], "Input",
+ CellChangeTimes->{{3.848007870567606*^9, 3.848008039441543*^9}, {
+  3.848008073176803*^9, 3.848008107626234*^9}, {3.84800817992435*^9, 
+  3.848008219294937*^9}, {3.8480083054544773`*^9, 3.848008314211898*^9}, {
+  3.848008459932642*^9, 3.848008461092595*^9}, {3.8480085782886877`*^9, 
+  3.848008602278412*^9}, {3.848008882927539*^9, 3.848008913182454*^9}, {
+  3.848009404699711*^9, 3.848009408664941*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"341e9fa9-967c-4bb7-a772-8a631e5eb325"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"calcRoot", "[", 
+  RowBox[{"r", ",", "t", ",", "w"}], "]"}]], "Input",
+ CellChangeTimes->{{3.848008434825344*^9, 3.848008449585685*^9}, {
+  3.848008900423703*^9, 3.848008900708993*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"77c4c36c-6272-497f-8908-3594396bc20d"],
+
+Cell[BoxData[
+ RowBox[{"{", "10.790627192210252`", "}"}]], "Output",
+ CellChangeTimes->{{3.848008450582081*^9, 3.84800846569458*^9}, 
+   3.848008606985717*^9, {3.848008903300036*^9, 3.848008916401689*^9}, 
+   3.848009411569166*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"893e32a2-39c5-4083-b33a-6ebc53f8e0bb"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Testes para o exerc\[IAcute]cio 2, onde n\[ATilde]o havia converg\[EHat]ncia \
+para certos valores de r,t:
+h = 2, r = h(i,j,k) = (2i,2j,2k), x0 = 2, a=-0,05
+v0 = -0.6633
+t0 = 2,734
+As minhas solu\[CCedilla]\[OTilde]es num\[EAcute]ricas funcionam muito bem. \
+Certamente irei refazer o algoritmo, consigo criar algo muito melhor que \
+aquilo, mas est\[AAcute] sim tudo funcionando perfeitamente. Algumas solu\
+\[CCedilla]\[OTilde]es realmente s\[ATilde]o imposs\[IAcute]veis no meu m\
+\[EAcute]todo Fortran, mas s\[ATilde]o calcul\[AAcute]veis por aqui. \
+Exemplos: r={1,40,10}, r={20,20,20}, etc. (todos em t0). Existem solu\
+\[CCedilla]\[OTilde]es reais para tr nesses pontos. Essas solu\[CCedilla]\
+\[OTilde]es reais n\[ATilde]o s\[ATilde]o f\[IAcute]sicas, pois a velocidade \
+\[EAcute] superior a 1, mas continuam sendo solu\[CCedilla]\[OTilde]es reais \
+que n\[ATilde]o s\[ATilde]o calculadas pelo meu algoritmo Fortran.\
+\>", "Text",
+ CellChangeTimes->{{3.8480090807543917`*^9, 3.848009150041963*^9}, {
+   3.848009205464101*^9, 3.8480092661608686`*^9}, 3.8480093237798233`*^9, {
+   3.848010044251864*^9, 3.8480101015593*^9}, {3.848010136335972*^9, 
+   3.848010194988738*^9}},ExpressionUUID->"915e50cc-fed4-4353-aaf5-\
+82dfbbc9d5ae"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"wMRUV", "[", "t_", "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", "-", 
+      RowBox[{"0.6633", "*", "t"}], "-", 
+      RowBox[{"0.05", "*", 
+       RowBox[{
+        RowBox[{"t", "^", "2"}], "/", "2"}]}]}], ",", "0", ",", "0"}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"calcRoot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "40", ",", "10"}], "}"}], ",", "2.734", ",", "wMRUV"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.8480093285472803`*^9, 3.848009514781386*^9}, {
+  3.8480098062973223`*^9, 3.848009873160975*^9}, {3.848009931504509*^9, 
+  3.8480099807712307`*^9}, {3.8480100266979637`*^9, 3.848010026959276*^9}, {
+  3.8480101048659782`*^9, 3.848010132663221*^9}},
+ CellLabel->"In[81]:=",ExpressionUUID->"4085c121-7d5c-4c63-be81-d1fa962584bb"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "57.96030631291607`"}], ",", 
+   RowBox[{"-", "40.5701848252242`"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.84800944850114*^9, 3.8480095152698603`*^9}, {
+   3.84800980722686*^9, 3.848009873488559*^9}, {3.8480099318522167`*^9, 
+   3.848009981216164*^9}, 3.848010027361733*^9, {3.848010105818331*^9, 
+   3.848010133108019*^9}},
+ CellLabel->"Out[82]=",ExpressionUUID->"aeb38980-c32d-48d9-9211-8445a6ba4bba"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1024.5, 533.25},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"12.3 for Linux x86 (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0957f1fb-f781-43a8-b3ad-8d57084b3695"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 161, 3, 69, "Chapter",ExpressionUUID->"e7d414c1-ea03-40f2-937c-ba52abe39961"],
+Cell[CellGroupData[{
+Cell[766, 29, 205, 3, 68, "Section",ExpressionUUID->"2872ef2b-4e74-401f-9f61-d7e22b4e4162"],
+Cell[974, 34, 162, 3, 35, "Text",ExpressionUUID->"7431295d-6365-46ec-b332-6742e8bd3eae"],
+Cell[CellGroupData[{
+Cell[1161, 41, 535, 12, 32, "Item",ExpressionUUID->"a19c8b7a-e698-4958-818b-bec0af42f6e8"],
+Cell[CellGroupData[{
+Cell[1721, 57, 336, 7, 26, "Subitem",ExpressionUUID->"b637d8ff-31ed-4d64-9d1c-a79327d5ef9f"],
+Cell[2060, 66, 1933, 53, 195, "Input",ExpressionUUID->"341e9fa9-967c-4bb7-a772-8a631e5eb325"],
+Cell[CellGroupData[{
+Cell[4018, 123, 288, 5, 29, "Input",ExpressionUUID->"77c4c36c-6272-497f-8908-3594396bc20d"],
+Cell[4309, 130, 310, 5, 33, "Output",ExpressionUUID->"893e32a2-39c5-4083-b33a-6ebc53f8e0bb"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[4658, 140, 1248, 21, 196, "Text",ExpressionUUID->"915e50cc-fed4-4353-aaf5-82dfbbc9d5ae"],
+Cell[CellGroupData[{
+Cell[5931, 165, 838, 21, 51, "Input",ExpressionUUID->"4085c121-7d5c-4c63-be81-d1fa962584bb"],
+Cell[6772, 188, 463, 9, 33, "Output",ExpressionUUID->"aeb38980-c32d-48d9-9211-8445a6ba4bba"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

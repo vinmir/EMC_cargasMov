@@ -1,0 +1,14 @@
+
+Problema 2:
+* certifique-se que a velocidade da carga seja sempre < c (em unidades normalizadas, v < 1). Isto é absurdamente importante.
+* utilize o problema 10.20 da 4th.
+
+Problema 3:
+* Gould, problema 10.20: determina que |E| ~ 1/r. Portanto, a previsão teórica à qual o enunciado se refere é simplesmente um gráfico |E|^2 com 1/r^2.
+* >> e << significam: use fatores 10^5. Faça testes. 
+    * Exmeplo: A << c/w => Aw/c << 1, Aw = 10^-6, A = 10^-6/w, com c=1
+* Para o gráfico S(w) x w do item b), use log-log. Outra alternativa é determinar o fitting de S = a w^b e determinar os coeficientes a e b.
+* Use as expressões analíticas de w(t), dw/dt(t), d2w/dt2(t), etc. Mas, caso queira, calcule numericamente.
+
+Extra:
+Suponha que tenho, numericamente, W(t=1,6), W(t=1,7). W(t=1,67) = ?. Use interpolação linear entre t=1,6; t=1,7. Para métodos mais avançados, use spline.
